@@ -3,6 +3,16 @@ entries:
   xavki_api:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2021-06-11T18:57:30.114367349Z"
+    description: A Helm chart for Xavki API in Kubernetes
+    digest: 6b0826e7d81b82ec405d2c465800d65514120d49d020f36d11374c93f631b91f
+    name: xavki_api
+    type: application
+    urls:
+    - https://github.com/priximmo/helmcharts/releases/download/xavki_api-0.1.1/xavki_api-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2021-06-10T19:50:37.484198965Z"
     description: A Helm chart for Xavki API in Kubernetes
     digest: b90f1314fb4af51089e48e8504a68da76ae94237ca82388bc1a6ee42950c85a8
@@ -44,4 +54,4 @@ entries:
     urls:
     - https://github.com/priximmo/helmcharts/releases/download/xavki_test-0.1.0/xavki_test-0.1.0.tgz
     version: 0.1.0
-generated: "2021-06-11T18:55:31.317252993Z"
+generated: "2021-06-11T18:57:30.114378749Z"
