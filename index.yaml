@@ -33,4 +33,15 @@ entries:
     urls:
     - releases/xavki_redisinsight-0.1.0.tgz
     version: 0.1.0
-generated: "2021-06-10T19:50:37.483751151Z"
+  xavki_test:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2021-06-11T18:55:31.317245392Z"
+    description: A Helm chart for Xavki API in Kubernetes
+    digest: 1b2eb7c68972557063d25be97eb0a38db442b6477e9a9515168735ea0c7dd0c8
+    name: xavki_test
+    type: application
+    urls:
+    - https://github.com/priximmo/helmcharts/releases/download/xavki_test-0.1.0/xavki_test-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-06-11T18:55:31.317252993Z"
