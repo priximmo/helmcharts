@@ -18,6 +18,7 @@ spec:
           - redis-server
           - "/redis-master/redis.conf"
           - "--requirepass {{ .Values.redis_password }}"
+          - "--appendonly yes"
         env:
         - name: MASTER
           value: "true"
@@ -29,13 +30,19 @@ spec:
           limits:
             cpu: "0.1"
         volumeMounts:
-        - mountPath: /redis-master-data
+        - mountPath: /data
           name: data
         - mountPath: /redis-master
           name: redis-config-{{ .Release.Name }}
       volumes:
+        {{- if eq .Values.redis_PersistentVolumeClaim.enabled true }}        
+        - name: data
+          persistentVolumeClaim:
+            claimName: {{ .Values.redis_PersistentVolumeClaim.name }}        
+        {{- else }}
         - name: data
           emptyDir: {}
+        {{- end }}
         - name: redis-config-{{ .Release.Name }}
           configMap:
             name: redis-{{ .Release.Name }}

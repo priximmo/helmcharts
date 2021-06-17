@@ -11,6 +11,8 @@ spec:
     metadata:
       labels:
         app: api-{{ .Release.Name }}
+      annotations:
+        checksum/secret: {{ .Values.api_configfile | toString  | sha256sum }}
     spec:
       containers:
       - name: api-{{ .Release.Name }}
